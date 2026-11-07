@@ -1,0 +1,13 @@
+<!-- Racine : LinearLayout horizontal, img al ysar (0,3) et RelativeLayout al ymin (0,7) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:weightSum="1" android:background="#F5E6C8">
+    <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.3" android:src="@drawable/ic_passeport" android:scaleType="centerInside" android:padding="8dp" android:contentDescription="Photo du passeport"/>
+    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" android:padding="16dp">
+        <TextView android:id="@+id/tv_titre_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="PASSEPORT TEMPOREL" android:textSize="20sp" android:textStyle="bold" android:textColor="#5D4037"/>
+        <TextView android:id="@+id/tv_nom_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_titre_xx" android:layout_marginTop="16dp" android:textSize="16sp" android:textColor="#000000"/>
+        <TextView android:id="@+id/tv_age_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_nom_xx" android:layout_marginTop="8dp" android:textSize="16sp" android:textColor="#000000"/>
+        <TextView android:id="@+id/tv_trajet_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_age_xx" android:layout_marginTop="8dp" android:textSize="16sp" android:textColor="#000000"/>
+        <TextView android:id="@+id/tv_motif_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_trajet_xx" android:layout_marginTop="8dp" android:textSize="16sp" android:textColor="#000000"/>
+        <Button android:id="@+id/btn_approuver_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_motif_xx" android:layout_marginTop="20dp" android:text="Approuver le saut temporel"/>
+        <Button android:id="@+id/btn_refuser_xx" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/btn_approuver_xx" android:text="Refuser (Risque de paradoxe)"/>
+    </RelativeLayout>
+</LinearLayout>
