@@ -1,4 +1,49 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/layout_racine_xx" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="24dp">
-    <TextView android:id="@+id/tv_message_xx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold" android:gravity="center"/>
-    <Button android:id="@+id/btn_nouveau_xx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Nouveau voyageur"/>
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    android:padding="24dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_racine_xx"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- LinearLayout: conteneur principal
+     padding = 24dp : mn jihetlkol
+     gravity = center : el contenu yet7at fil west mte3 el écran
+     orientation = vertical : el éléments fou9 b3adhom
+     layout_height / layout_width = match_parent : ya5ou  écran lkolou
+     id = layout_racine_xx : bech nalkawah fil Java (mathalan bech nbadl el loun mte3 el fond 7asb el résultat)
+     xmlns:android = namespace bech nesta3mlou android:xxx -->
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_message_xx"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"/>
+    <!-- TextView: texte eli yodhhor fil écran, houni el message mte3 el résultat.
+        gravity = center : el texte yet7at fil west mte3 el TextView
+        layout_width/height = wrap_content :9ad el text
+        id = tv_message_xx : bech nekteb fih el message mel Java (setText)
+        textStyle = bold : khchin
+        textSize = 26sp : taille el 7arf
+        textColor = #FFFFFF : loun abyedh, yodhhor mlih 3la fond fih loun
+        Ma fihch android:text: el message yet7at mel Java -->
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_nouveau_xx"
+        android:text="Nouveau voyageur"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Button: bouton "Nouveau voyageur" (traveller jdid).
+         id = btn_nouveau_xx : bech nzidlou setOnClickListener fil Java
+         text = chneya maktoub al btn
+         layout_marginTop = 32dp : espace bin text w btn
+         wrap_content : 9ad el text -->
+
 </LinearLayout>

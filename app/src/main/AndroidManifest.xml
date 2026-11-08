@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Déclaration XML: version 1.0 w encodage UTF-8 -->
+<!-- Balise racine: manifest = carte d'identité mte3 l'app, w "android" namespace mte3 les attributs -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- application: fiha les composants lkoooool (activities...). Les attributs:
+         allowBackup = ykhali les donnees yaamlou backup
+         dataExtractionRules / fullBackupContent = règles mte3 el backup (Android 12+ / 9bal)
+         icon / roundIcon = icône normal w icône mdawra
+         label = esm l application eli todhhor ll user
+         supportsRtl = bch tnajem tekteb ml ymin ll ysar normal
+         theme = el thème (couleurs w style) mte3 l'app kol -->
 
     <application
         android:allowBackup="true"
@@ -10,27 +19,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DouaneTemporelle">
-
+        android:theme="@style/Theme.MyApplication">
+        <!-- MainActivity: awel ecran yodhhroli ki nhelel application.
+            exported=true : lezem elsys y7elha mn el launcher .
+            adjustResize = ki yodhherli el clavier el ecran bech yesghar -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
+            <!-- intent-filter: y9oul el activity hedhi chneya tnajem te9bel  -->
             <intent-filter>
+                <!-- MAIN = point d'entrée principal mte3 l'app -->
                 <action android:name="android.intent.action.MAIN" />
+                <!-- LAUNCHER = tatla3 fil menu des apps w tnajem  t7elha  ki tenzel 3al icône -->
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- VerificationActivity: écran el vérification.
+            exported=false = privée, ken l'app mte3na tnajem t7elha  (sécurité) -->
         <activity
             android:name=".VerificationActivity"
-            android:exported="false" />
-
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- ResultActivity: écran el résultat, privée zeda w el clavier ysagher (t7esou yeb3ed) el écran -->
         <activity
             android:name=".ResultActivity"
-            android:exported="false" />
-
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

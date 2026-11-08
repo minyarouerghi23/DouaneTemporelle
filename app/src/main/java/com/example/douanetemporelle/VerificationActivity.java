@@ -17,7 +17,7 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        // 1 norbtou les elts mta xml bel id mtehom
+        // norbot fl khyout
         tvNom = findViewById(R.id.tv_nom_xx);
         tvAge = findViewById(R.id.tv_age_xx);
         tvTrajet = findViewById(R.id.tv_trajet_xx);
@@ -25,33 +25,33 @@ public class VerificationActivity extends AppCompatActivity {
         btnApprouver = findViewById(R.id.btn_approuver_xx);
         btnRefuser = findViewById(R.id.btn_refuser_xx);
 
-        // 2 nrecuperiw data mel activ 1
+        // ne9bel les coordonnees ml activity loula
         Intent intent = getIntent();
         String nom = intent.getStringExtra(Cles.cle(Cles.MATRICULE, "NOM_VOYAGEUR"));
         int naissance = intent.getIntExtra(Cles.cle(Cles.MATRICULE, "ANNEE_NAISSANCE"), 0);
         int destination = intent.getIntExtra(Cles.cle(Cles.MATRICULE, "ANNEE_DESTINATION"), 0);
         String motif = intent.getStringExtra(Cles.cle(Cles.MATRICULE, "MOTIF"));
 
-        // 3 3mor = an dest-an naiss
+        // ne7seblou el 3am eli bch ysefer fih na7i menou l3ameli touled fih
         int ageTemporel = destination - naissance;
 
-        // 4 recap
+        // na3tik el fichaaaaa
         tvNom.setText("Nom : " + nom);
         tvAge.setText("Âge temporel : " + ageTemporel + " ans");
         tvTrajet.setText("Trajet : " + naissance + " -> " + destination);
         tvMotif.setText("Motif : " + motif);
 
-        //5 btn approuv ssi modif passé+ diff nb 1er
+        // nehlek el bouton idha ken el conditionet el zouz yet7a9e9ou
         if (motif.equals("Modification du passé") && estPremier(ageTemporel)) {
             btnApprouver.setEnabled(false);
         }
 
-        // when clicked nbaathoulou res + esmou
+        // ki nenzel ala el fles yebaathli T wela F w esm el sayed
         btnApprouver.setOnClickListener(v -> ouvrirVerdict(true, nom));
         btnRefuser.setOnClickListener(v -> ouvrirVerdict(false, nom));
     }
 
-    // 7 chn7elou activ3
+    // sbab y7eli el activity el theltha
     private void ouvrirVerdict(boolean approuve, String nom) {
         Intent intent = new Intent(VerificationActivity.this, ResultActivity.class);
         intent.putExtra(Cles.cle(Cles.MATRICULE, "VERDICT"), approuve);
@@ -59,7 +59,7 @@ public class VerificationActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // 8 fct verif 1er ou pas
+    // tchouf nbr premier wela le
     private boolean estPremier(int n) {
         if (n < 2) {
             return false;
