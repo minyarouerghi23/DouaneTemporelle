@@ -49,81 +49,81 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="PASSEPORT TEMPOREL"
-        android:id="@+id/tv_titre_xx"/>
+        android:id="@+id/tv_titre_am"/>
         <!-- TextView : el titre  lfou9ani  "PASSEPORT TEMPOREL".
         textColor = #5D4037 : marron foncé
         textSize = 20sp : taille el 7arf
         text = el kelma eli todhhor
-        id = tv_titre_xx : bech el textes el o5rin yetrabtou bih (layout_below) -->
+        id = tv_titre_am : bech el textes el o5rin yetrabtou bih (layout_below) -->
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:id="@+id/tv_nom_xx"
+        android:id="@+id/tv_nom_am"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/tv_titre_xx"/>
+        android:layout_below="@id/tv_titre_am"/>
         <!-- TextView : yaatina  el esm mte3 el voyageur ( mel Java b setText).
         textColor = #000000 : loun akhal (noir)
         textSize = 16sp : taille el 7arf
         layout_marginTop = 16dp : fara8 16dp 3al titre
-        layout_below = @id/tv_titre_xx : yethat ta7t el titre direct -->
+        layout_below = @id/tv_titre_am : yethat ta7t el titre direct -->
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:id="@+id/tv_age_xx"
+        android:id="@+id/tv_age_am"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_nom_xx"/>
+        android:layout_below="@id/tv_nom_am"/>
         <!-- TextView : yaatina el 3omr (age) mte3 el voyageur.
          layout_marginTop = 8dp : fara8 sghir 8dp
-         layout_below = @id/tv_nom_xx : ta7t el esm -->
+         layout_below = @id/tv_nom_am : ta7t el esm -->
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:id="@+id/tv_trajet_xx"
+        android:id="@+id/tv_trajet_am"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_age_xx"/>
+        android:layout_below="@id/tv_age_am"/>
         <!-- TextView : yaatina el trajet (men 3am l3am, mathalan 1990 -> 2050).
-         layout_below = @id/tv_age_xx : ta7t el age  -->
+         layout_below = @id/tv_age_am : ta7t el age  -->
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:id="@+id/tv_motif_xx"
+        android:id="@+id/tv_motif_am"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_trajet_xx"/>
+        android:layout_below="@id/tv_trajet_am"/>
         <!-- TextView : ya3tina el motif du voyage eli ikhtarou el user fil Spinner.
-        layout_below = @id/tv_trajet_xx : ta7t el trajet -->
+        layout_below = @id/tv_trajet_am : ta7t el trajet -->
 
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Approuver le saut temporel"
-        android:id="@+id/btn_approuver_xx"
+        android:id="@+id/btn_approuver_am"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/tv_motif_xx"/>
+        android:layout_below="@id/tv_motif_am"/>
         <!-- Button : bouton "Approuver le saut temporel" (ye9beli el voyage).
-         id = btn_approuver_xx : bech nzidou setOnClickListener fil Java
+         id = btn_approuver_am : bech nzidou setOnClickListener fil Java
          layout_marginTop = 20dp : fara8 20dp fou9 el bouton
-         layout_below = @id/tv_motif_xx : ta7t el motif -->
+         layout_below = @id/tv_motif_am : ta7t el motif -->
 
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Refuser (Risque de paradoxe)"
-        android:id="@+id/btn_refuser_xx"
-        android:layout_below="@id/btn_approuver_xx"/>
+        android:id="@+id/btn_refuser_am"
+        android:layout_below="@id/btn_approuver_am"/>
         <!-- Button : bouton "Refuser (Risque de paradoxe)" (ma ye9belch el voyage).
-        layout_below = @id/btn_approuver_xx : ta7t bouton el approuver -->
+        layout_below = @id/btn_approuver_am : ta7t bouton el approuver -->
 
 </RelativeLayout>
 

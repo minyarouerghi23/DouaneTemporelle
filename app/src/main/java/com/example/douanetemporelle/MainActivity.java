@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 1) تعريف عناصر الواجهة
+    // declarina les champs
     EditText etNom, etNaissance, etDestination;
     Spinner spMotif;
     Button btnInspecter;
@@ -22,37 +22,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 2) ربط العناصر بالـ XML عن طريق الـ id
-        etNom = findViewById(R.id.et_nom_xx);
-        etNaissance = findViewById(R.id.et_naissance_xx);
-        etDestination = findViewById(R.id.et_destination_xx);
-        spMotif = findViewById(R.id.sp_motif_xx);
-        btnInspecter = findViewById(R.id.btn_inspecter_xx);
+        // rbatna les elements bl XML atravers el ID
+        etNom = findViewById(R.id.et_nom_am);
+        etNaissance = findViewById(R.id.et_naissance_am);
+        etDestination = findViewById(R.id.et_destination_am);
+        spMotif = findViewById(R.id.sp_motif_am);
+        btnInspecter = findViewById(R.id.btn_inspecter_am);
 
-        // 3) ملء القائمة المنسدلة بالأسباب الثلاثة
+        // n3amrou el liste
         String[] motifs = {"Tourisme", "Modification du passé", "Fuite"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, motifs);
         spMotif.setAdapter(adapter);
 
-        // 4) عند الضغط على الزر
+        // kif tenzel chneya ysir
         btnInspecter.setOnClickListener(v -> {
             String nom = etNom.getText().toString().trim();
             String naissance = etNaissance.getText().toString().trim();
             String destination = etDestination.getText().toString().trim();
             String motif = spMotif.getSelectedItem().toString();
 
-            // 5) التحقق من أن كل الحقول مملوءة
+            // tthabet ma fma hata case fergha
             if (nom.isEmpty() || naissance.isEmpty() || destination.isEmpty()) {
                 Toast.makeText(this, "Remplis tous les champs", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // 6) إرسال المعطيات إلى النشاط الثاني (Intent صريح)
+            int n = Integer.parseInt(naissance);
+            int d = Integer.parseInt(destination);
+            if (d <= n) {
+                Toast.makeText(this, "L'année de destination doit être après la naissance", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // teb3ath les coordonnees ll activity eli baadha
             Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
             intent.putExtra(Cles.cle(Cles.MATRICULE, "NOM_VOYAGEUR"), nom);
-            intent.putExtra(Cles.cle(Cles.MATRICULE, "ANNEE_NAISSANCE"), Integer.parseInt(naissance));
-            intent.putExtra(Cles.cle(Cles.MATRICULE, "ANNEE_DESTINATION"), Integer.parseInt(destination));
+            intent.putExtra(Cles.cle(Cles.MATRICULE, "ANNEE_NAISSANCE"), n);
+            intent.putExtra(Cles.cle(Cles.MATRICULE, "ANNEE_DESTINATION"), d);
             intent.putExtra(Cles.cle(Cles.MATRICULE, "MOTIF"), motif);
             startActivity(intent);
         });

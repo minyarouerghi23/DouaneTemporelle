@@ -17,9 +17,9 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         // norbtou les elts bel id mtehom
-        LinearLayout racine = findViewById(R.id.layout_racine_xx);
-        TextView tvMessage = findViewById(R.id.tv_message_xx);
-        Button btnNouveau = findViewById(R.id.btn_nouveau_xx);
+        LinearLayout racine = findViewById(R.id.layout_racine_am);
+        TextView tvMessage = findViewById(R.id.tv_message_am);
+        Button btnNouveau = findViewById(R.id.btn_nouveau_am);
 
         // 2 nrecuperiw data
         Intent intent = getIntent();

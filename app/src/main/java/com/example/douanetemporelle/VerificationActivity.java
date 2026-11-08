@@ -18,12 +18,12 @@ public class VerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_verification);
 
         // norbot fl khyout
-        tvNom = findViewById(R.id.tv_nom_xx);
-        tvAge = findViewById(R.id.tv_age_xx);
-        tvTrajet = findViewById(R.id.tv_trajet_xx);
-        tvMotif = findViewById(R.id.tv_motif_xx);
-        btnApprouver = findViewById(R.id.btn_approuver_xx);
-        btnRefuser = findViewById(R.id.btn_refuser_xx);
+        tvNom = findViewById(R.id.tv_nom_am);
+        tvAge = findViewById(R.id.tv_age_am);
+        tvTrajet = findViewById(R.id.tv_trajet_am);
+        tvMotif = findViewById(R.id.tv_motif_am);
+        btnApprouver = findViewById(R.id.btn_approuver_am);
+        btnRefuser = findViewById(R.id.btn_refuser_am);
 
         // ne9bel les coordonnees ml activity loula
         Intent intent = getIntent();
