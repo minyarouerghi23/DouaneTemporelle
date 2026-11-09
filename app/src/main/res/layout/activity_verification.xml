@@ -1,130 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-
-    <LinearLayout
-    android:background="#F5E6C8"
-    android:weightSum="1"
-    android:orientation="horizontal"
-    android:layout_height="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1) ecran 2: el passeport. el jedhr LinearLayout ofo9i: ysar el sora (0.3) w ymin RelativeLayout (0.7) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- LinearLayout racine: te9sem el écran en 2 colonnes (horizontal): taswira 3al isar w el infos 3al limin.
-     background = #F5E6C8 : loun beige za3ma za3ma ki loun war9et el passport
-     weightSum = 1 : majmou3 el poids = 1, bech 0.3 + 0.7 yaatini 100 percent  mte3 el largeur
-     orientation = horizontal : el éléments janb b3adhom (men isar l limin)
-     layout_height / layout_width = match_parent : ya5ou el écran lkol
-     xmlns:android = namespace bech nesta3mlou android:xxx -->
+    android:layout_height="match_parent"
+    android:background="#F5E6C8"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="1">
 
+    <!-- 2) el sora fi ysar b wazn 0.3 -->
     <ImageView
-        android:layout_height="match_parent"
+        android:id="@+id/img_passeport_am"
         android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
         android:contentDescription="Photo du passeport"
         android:padding="8dp"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_passeport"
-        android:layout_weight="0.3"/>
-    <!-- ImageView: taswira mte3 el passeport (el colonne el isar).
-        layout_width = 0dp + layout_weight = 0.3 : ya5ou 30% men el largeur (el largeur tethseb  bil poids)
-        layout_height = match_parent : ya5ou l hauteurrrr lkooool
-        contentDescription =  TalkBack mtee taswira
-        padding = 8dp : ykhaliha around el pic
-        scaleType = centerInside : el taswira tet7at fil west w tesghar bech todkhol koulha men ghir ma tet9s
-        src = @drawable/ic_passeport : el icône eli tji (el vector eli 9bal) -->
+        android:src="@drawable/ic_passeport" />
 
-
+    <!-- 3) el RelativeLayout fi ymin b wazn 0.7 fih el cadre w el textes -->
     <RelativeLayout
-        android:layout_height="match_parent"
         android:layout_width="0dp"
-        android:padding="16dp"
-        android:layout_weight="0.7">
-        <!-- RelativeLayout: el colonne el limin (70%), fih les textes w les boutons.
-         Ykhalina nhotou kol élément 9bal/ba3d élément whd ekhor (layout_below)
-         layout_width = 0dp + layout_weight = 0.7 : ya5ou 70% men el largeur -->
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="@drawable/bg_cadre_passeport"
+        android:padding="16dp">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="#5D4037"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="PASSEPORT TEMPOREL"
-        android:id="@+id/tv_titre_am"/>
-        <!-- TextView : el titre  lfou9ani  "PASSEPORT TEMPOREL".
-        textColor = #5D4037 : marron foncé
-        textSize = 20sp : taille el 7arf
-        text = el kelma eli todhhor
-        id = tv_titre_am : bech el textes el o5rin yetrabtou bih (layout_below) -->
+        <TextView
+            android:id="@+id/tv_titre_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="PASSEPORT TEMPOREL"
+            android:textColor="#5D4037"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:id="@+id/tv_nom_am"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/tv_titre_am"/>
-        <!-- TextView : yaatina  el esm mte3 el voyageur ( mel Java b setText).
-        textColor = #000000 : loun akhal (noir)
-        textSize = 16sp : taille el 7arf
-        layout_marginTop = 16dp : fara8 16dp 3al titre
-        layout_below = @id/tv_titre_am : yethat ta7t el titre direct -->
+        <!-- 4) el ma3loumet mte3 el msafer, kol wa7da ta7t el o5ra -->
+        <TextView
+            android:id="@+id/tv_nom_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_am"
+            android:layout_marginTop="16dp"
+            android:textColor="#3E2723"
+            android:textSize="15sp" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:id="@+id/tv_age_am"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_nom_am"/>
-        <!-- TextView : yaatina el 3omr (age) mte3 el voyageur.
-         layout_marginTop = 8dp : fara8 sghir 8dp
-         layout_below = @id/tv_nom_am : ta7t el esm -->
+        <TextView
+            android:id="@+id/tv_age_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_am"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="15sp" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:id="@+id/tv_trajet_am"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_age_am"/>
-        <!-- TextView : yaatina el trajet (men 3am l3am, mathalan 1990 -> 2050).
-         layout_below = @id/tv_age_am : ta7t el age  -->
+        <TextView
+            android:id="@+id/tv_trajet_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_am"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="15sp" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:id="@+id/tv_motif_am"
-        android:layout_marginTop="8dp"
-        android:layout_below="@id/tv_trajet_am"/>
-        <!-- TextView : ya3tina el motif du voyage eli ikhtarou el user fil Spinner.
-        layout_below = @id/tv_trajet_am : ta7t el trajet -->
+        <TextView
+            android:id="@+id/tv_motif_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_trajet_am"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="15sp" />
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Approuver le saut temporel"
-        android:id="@+id/btn_approuver_am"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/tv_motif_am"/>
-        <!-- Button : bouton "Approuver le saut temporel" (ye9beli el voyage).
-         id = btn_approuver_am : bech nzidou setOnClickListener fil Java
-         layout_marginTop = 20dp : fara8 20dp fou9 el bouton
-         layout_below = @id/tv_motif_am : ta7t el motif -->
+        <!-- 5) el zorrin: el khdher li ywafe9 w el a7mer li yarfodh -->
+        <Button
+            android:id="@+id/btn_approuver_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_motif_am"
+            android:layout_marginTop="20dp"
+            android:text="Approuver le saut temporel"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:backgroundTint="#2E7D32"
+            app:cornerRadius="12dp" />
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Refuser (Risque de paradoxe)"
-        android:id="@+id/btn_refuser_am"
-        android:layout_below="@id/btn_approuver_am"/>
-        <!-- Button : bouton "Refuser (Risque de paradoxe)" (ma ye9belch el voyage).
-        layout_below = @id/btn_approuver_am : ta7t bouton el approuver -->
+        <Button
+            android:id="@+id/btn_refuser_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_am"
+            android:layout_marginTop="8dp"
+            android:text="Refuser (Risque de paradoxe)"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:backgroundTint="#C62828"
+            app:cornerRadius="12dp" />
 
-</RelativeLayout>
-
+        <!-- 6) el message mte3 el paradoxe: mkhabbi, yodhher ken el zorr Approuver ma3toul -->
+        <TextView
+            android:id="@+id/tv_paradoxe_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_refuser_am"
+            android:layout_marginTop="12dp"
+            android:textColor="#C62828"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
 </LinearLayout>

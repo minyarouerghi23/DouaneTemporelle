@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 1) ecran 1: el formulaire, fond beige style passeport 9dim -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- ScrollView: conteneur eli ykhalli el écran yetscrolla
-     houni LinearLayout
-     xmlns:android = namespace bech nesta3mlou android:xxx
-     layout_width/height = match_parent : ya5ou kol el largeur w el hauteur mte3 el écran -->
+    android:layout_height="match_parent"
+    android:background="#F5E6C8"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp">
-        <!-- LinearLayout: ynadhemhom wehed apres lekher .
-         layout_width = match_parent : ya5ou  el largeur lkol
-         layout_height = wrap_content : ykaber kad  el contenu bark (lezem fi west ScrollView)
-         orientation = vertical : el éléments fou9 b3adhhom (men fou9 l louta)
-         padding = 24dp : ml lescotes lkol bch ma yodkholch fl bord  -->
 
+        <!-- 0) el logo mte3 el app fo9 el titre -->
+        <ImageView
+            android:id="@+id/img_logo_am"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Logo Douane Temporelle"
+            android:src="@drawable/ic_passeport" />
 
+        <!-- 2) el titre w el sous-titre -->
         <TextView
+            android:id="@+id/tv_titre_am"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Douane Temporelle"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
-        <!-- TextView: texte statique, houni el titre mte3 l'app.
-             text = el 3onwen eli bch yodhher
-             textSize = 26sp : taille el 7arf
-             textStyle = bold : police
-             layout_marginBottom = 24dp : marge taht el text -->
+            android:gravity="center"
+            android:text="DOUANE TEMPORELLE"
+            android:textColor="#5D4037"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/tv_soustitre_am"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Poste de contrôle des voyageurs du temps"
+            android:textColor="#8D6E63"
+            android:textSize="14sp" />
+
+        <!-- 3) el 7o9oul mte3 el formulaire -->
         <EditText
             android:id="@+id/et_nom_am"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nom du voyageur"
-            android:inputType="textPersonName" />
-        <!-- EditText  champ de saisie mte3 el esm.
-             id = identifiant bech nalkawah fil code Java (findViewById), "+" ya3ni naamlou  id jdid
-             hint = texte gris eli yodhhor ki el champ fer8 par defaut kima ghadikanom du voyageur
-             inputType = textPersonName : clavier mte3 les noms -->
+            android:inputType="textPersonName"
+            android:textColor="#3E2723"
+            android:textColorHint="#8D6E63" />
 
         <EditText
             android:id="@+id/et_naissance_am"
@@ -49,10 +61,9 @@
             android:layout_height="wrap_content"
             android:hint="Année de naissance (ex: 1990)"
             android:inputType="number"
-            android:maxLength="4" />
-        <!-- EditText mte3 champ mte3 date of birth.
-            inputType = number : clavier mte3 les chiffres bark
-            maxLength = 4 : ma ykhalikech tekteb aktherr men 4 chiffres (mathalan 1990 akahw) -->
+            android:maxLength="4"
+            android:textColor="#3E2723"
+            android:textColorHint="#8D6E63" />
 
         <EditText
             android:id="@+id/et_destination_am"
@@ -60,33 +71,36 @@
             android:layout_height="wrap_content"
             android:hint="Année de destination (ex: 2050)"
             android:inputType="number"
-            android:maxLength="4" />
-        <!-- EditText #3: champ mte3 el 3am mtee el destination (mathalan 2050), nafs el fekra: chiffres bark w max 4 -->
+            android:maxLength="4"
+            android:textColor="#3E2723"
+            android:textColorHint="#8D6E63" />
 
+        <!-- 4) el motif mte3 es-safra -->
         <TextView
+            android:id="@+id/tv_label_motif_am"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Motif du voyage"
-            android:layout_marginTop="16dp" />
-        <!-- TextView: label  fou9 el Spinner, maktoub fih "Motif du voyage".
-             layout_marginTop = 16dp : fara8 16dp fou9 el texte bech yfara9 bin les champs eli 9bal -->
+            android:textColor="#5D4037"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/sp_motif_am"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <!-- Spinner: liste déroulante, el user chooses  menha motif wa7ed.
-             id = sp_motif_am : bech n3abiw les choix fil Java b adapter (el choix ma7attouch houni fil XML) -->
 
+        <!-- 5) zorr el fa7s -->
         <Button
             android:id="@+id/btn_inspecter_am"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Inspecter le profil" />
-        <!-- Button: bouton
-            id = btn_inspecter_am : bech nzidoulou setOnClickListener fil Java
-            layout_marginTop = 24dp : espace  fou9 el bouton
-            text = chneya maktoub ala el bouton mathalan inspecter le profil -->
+            android:minHeight="52dp"
+            android:text="Inspecter le profil"
+            android:textColor="#F5E6C8"
+            android:textSize="16sp"
+            app:backgroundTint="#5D4037"
+            app:cornerRadius="12dp" />
     </LinearLayout>
 </ScrollView>

@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-    <LinearLayout
-    android:padding="24dp"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1) ecran 3: el verdict. el jedhr LinearLayout w el background yetbaddel mel Java (khdher wala a7mer) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_racine_am"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:gravity="center"
     android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:id="@+id/layout_racine_am"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- LinearLayout: conteneur principal
-     padding = 24dp : mn jihetlkol
-     gravity = center : el contenu yet7at fil west mte3 el écran
-     orientation = vertical : el éléments fou9 b3adhom
-     layout_height / layout_width = match_parent : ya5ou  écran lkolou
-     id = layout_racine_am : bech nalkawah fil Java (mathalan bech nbadl el loun mte3 el fond 7asb el résultat)
-     xmlns:android = namespace bech nesta3mlou android:xxx -->
+    android:padding="24dp">
 
+    <!-- 2) el tampon: ktiba mayla fi 7a9ha el bordure -->
     <TextView
-        android:gravity="center"
-        android:layout_height="wrap_content"
+        android:id="@+id/tv_tampon_am"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tampon"
+        android:letterSpacing="0.1"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:rotation="-12"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- 3) el message mte3 el verdict -->
+    <TextView
         android:id="@+id/tv_message_am"
-        android:textStyle="bold"
-        android:textSize="26sp"
-        android:textColor="#FFFFFF"/>
-    <!-- TextView: texte eli yodhhor fil écran, houni el message mte3 el résultat.
-        gravity = center : el texte yet7at fil west mte3 el TextView
-        layout_width/height = wrap_content :9ad el text
-        id = tv_message_am : bech nekteb fih el message mel Java (setText)
-        textStyle = bold : khchin
-        textSize = 26sp : taille el 7arf
-        textColor = #FFFFFF : loun abyedh, yodhhor mlih 3la fond fih loun
-        Ma fihch android:text: el message yet7at mel Java -->
-
-    <Button
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- 4) zorr el rjou3 lel formulaire -->
+    <Button
         android:id="@+id/btn_nouveau_am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="52dp"
         android:text="Nouveau voyageur"
-        android:layout_marginTop="32dp"/>
-
-    <!-- Button: bouton "Nouveau voyageur" (traveller jdid).
-         id = btn_nouveau_am : bech nzidlou setOnClickListener fil Java
-         text = chneya maktoub al btn
-         layout_marginTop = 32dp : espace bin text w btn
-         wrap_content : 9ad el text -->
-
+        android:textColor="#5D4037"
+        app:backgroundTint="#F5E6C8"
+        app:cornerRadius="12dp" />
 </LinearLayout>

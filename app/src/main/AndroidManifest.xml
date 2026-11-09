@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.DouaneTemporelle">
         <!-- MainActivity: awel ecran yodhhroli ki nhelel application.
             exported=true : lezem elsys y7elha mn el launcher .
             adjustResize = ki yodhherli el clavier el ecran bech yesghar -->
