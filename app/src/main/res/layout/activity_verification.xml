@@ -1,21 +1,19 @@
-<!--  1) ecran 2: el passeport. el jedhr LinearLayout ofo9i: ysar el sora (0.3) w ymin RelativeLayout (0.7)  -->
+<!-- 1) ecran 2: el passeport. el jedhr LinearLayout ofo9i: ysar el pic(0.3) w ymin RelativeLayout (0.7)  -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F5E6C8" android:fitsSystemWindows="true" android:orientation="horizontal" android:padding="8dp" android:weightSum="1">
-    <!--  2) el sora fi ysar b wazn 0.3  -->
+    <!--  2) el sora fi ysar weoight 0.3  -->
     <ImageView android:id="@+id/img_passeport_am" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.3" android:contentDescription="Photo du passeport" android:padding="8dp" android:scaleType="centerInside" android:src="@drawable/ic_passeport"/>
     <!--  3) el passeport yetscrolla ki el écran ykoun sghir  -->
-    <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" android:fillViewport="true" android:background="@drawable/bg_cadre_passeport">
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+<RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" android:background="@drawable/bg_cadre_passeport" android:padding="16dp">
             <TextView android:id="@+id/tv_titre_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="PASSEPORT TEMPOREL" android:textColor="#5D4037" android:textSize="18sp" android:textStyle="bold"/>
-            <!--  4) el ma3loumet mte3 el msafer, kol wa7da ta7t el o5ra  -->
+            <!--  4) el ma3loumet mte3 el voyageur, ta7t b3adhhom  -->
             <TextView android:id="@+id/tv_nom_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_titre_am" android:layout_marginTop="16dp" android:textColor="#3E2723" android:textSize="15sp"/>
             <TextView android:id="@+id/tv_age_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_nom_am" android:layout_marginTop="8dp" android:textColor="#3E2723" android:textSize="15sp"/>
             <TextView android:id="@+id/tv_trajet_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_age_am" android:layout_marginTop="8dp" android:textColor="#3E2723" android:textSize="15sp"/>
             <TextView android:id="@+id/tv_motif_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_trajet_am" android:layout_marginTop="8dp" android:textColor="#3E2723" android:textSize="15sp"/>
-            <!--  5) zorrin: el khdher li ywafe9 w el a7mer li yarfodh  -->
+            <!--  5) 2 btns: vert yaccepti rouge yrefusi -->
             <Button android:id="@+id/btn_approuver_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_motif_am" android:layout_marginTop="20dp" android:text="Approuver le saut temporel" android:textColor="#FFFFFF" android:textSize="13sp" app:backgroundTint="#2E7D32" app:cornerRadius="12dp"/>
             <Button android:id="@+id/btn_refuser_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/btn_approuver_am" android:layout_marginTop="8dp" android:text="Refuser (Risque de paradoxe)" android:textColor="#FFFFFF" android:textSize="13sp" app:backgroundTint="#C62828" app:cornerRadius="12dp"/>
-            <!--  6) el message mte3 el paradoxe: mkhabbi, yodhher ken el zorr Approuver ma3toul  -->
+            <!--  6) el message mte3 el paradoxe: mkhabbi, yodhher ken mtaa approval désactivé  -->
             <TextView android:id="@+id/tv_paradoxe_am" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/btn_refuser_am" android:layout_marginTop="12dp" android:textColor="#C62828" android:textSize="14sp" android:textStyle="bold" android:visibility="gone"/>
-        </RelativeLayout>
-    </ScrollView>
+</RelativeLayout>
 </LinearLayout>
