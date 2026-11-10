@@ -27,7 +27,7 @@ public class ResultActivity extends AppCompatActivity {
         boolean approuve = intent.getBooleanExtra(Cles.cle(Cles.MATRICULE, "VERDICT"), false);
         String nom = intent.getStringExtra(Cles.cle(Cles.MATRICULE, "NOM_VOYAGEUR"));
 
-        // 3) 7asb el 7okm yetbaddel loun el background (khdher wala a7mer), el tampon w el message
+        // 3) 7asb el 7okm yetbaddel loun el background (ya vert ya rouge), el tampon w el message
         if (approuve) {
             racine.setBackgroundColor(Color.parseColor("#2E7D32"));
             tvTampon.setText("APPROUVÉ");
@@ -38,7 +38,7 @@ public class ResultActivity extends AppCompatActivity {
             tvMessage.setText(nom + " est en état d'arrestation temporelle");
         }
 
-        // 4) zorr "Nouveau voyageur" yrajja3na lel MainActivity w yesker el activities el 9dima
+        // 4) btn "Nouveau voyageur" yrajja3na lel MainActivity w ysaker el activities el 9dima
         btnNouveau.setOnClickListener(v -> {
             Intent retour = new Intent(ResultActivity.this, MainActivity.class);
             retour.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -46,4 +46,4 @@ public class ResultActivity extends AppCompatActivity {
             finish();
         });
     }
-}
+}a
