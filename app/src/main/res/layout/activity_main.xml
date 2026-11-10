@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- 0) el logo mte3 el app fo9 el titre -->
+        <!-- 0) el logo mte3 el app fou9 el titre -->
         <ImageView
             android:id="@+id/img_logo_am"
             android:layout_width="96dp"
@@ -45,7 +45,7 @@
             android:textColor="#8D6E63"
             android:textSize="14sp" />
 
-        <!-- 3) el 7o9oul mte3 el formulaire -->
+        <!-- 3) les champs mte3 el formulaire -->
         <EditText
             android:id="@+id/et_nom_am"
             android:layout_width="match_parent"
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- 5) zorr el fa7s -->
+        <!-- 5) btn li ycheckii -->
         <Button
             android:id="@+id/btn_inspecter_am"
             android:layout_width="match_parent"
