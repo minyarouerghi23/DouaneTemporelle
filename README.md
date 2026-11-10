@@ -7,6 +7,8 @@ Enseignant : Nidhal Jelassi
 - Azza HAMMOURI (initiales : AH)
 - Minyar OUERGHI (initiales : MO)
 - Ameni BOUGUERRA (initiales : AB)
+  
+!! NB: mahabinech nekhtarou initial mta une seule, yekhi on a choisit "AM" comme ce sont les lettres communes de nos prénoms j'espère que ce sera accepté !!
 
 ## Description
 Application Android qui simule un poste de douane pour voyageurs du temps (3 activités) :
