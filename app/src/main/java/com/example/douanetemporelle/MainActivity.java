@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // 0) nforciw mode el fate7 bch el alwen yodhhrou mli7
+        // nforciw mode el fate7 bch el alwen yodhhrou mli7
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // rbatna les elements bl XML atravers el ID
+        // rbatna les elements bl XML à travers el ID
         etNom = findViewById(R.id.et_nom_am);
         etNaissance = findViewById(R.id.et_naissance_am);
         etDestination = findViewById(R.id.et_destination_am);
